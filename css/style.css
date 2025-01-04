@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+input,
+button,
+textarea {
+  background-color: #fff;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+body {
+  background-color: #222;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 3rem;
+}
+
+.heading__logo {
+  color: #f1f1f1;
+  font-size: 35rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: -1.5rem;
+  order: 2;
+}
+.heading__logo span {
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+}
+.heading__logo span:nth-child(1) {
+  animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.heading__logo span:nth-child(2) {
+  animation-delay: 1s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.lg__logo {
+  width: 35rem;
+  height: 35rem;
+  background: linear-gradient(to right, #ff3333, #b30000);
+  border-radius: 50%;
+  position: relative;
+}
+.lg__logo-line-01 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 29rem;
+  height: 29rem;
+  border-radius: 50%;
+  border: 1.2rem solid #f1f1f1;
+  border-right-color: transparent;
+}
+.lg__logo-line-02 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: #f1f1f1;
+  width: 1.2rem;
+  height: 15rem;
+}
+.lg__logo-line-02::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  background-color: #f1f1f1;
+  width: 4.5rem;
+  height: 1.2rem;
+}
+.lg__logo-line-04 {
+  position: absolute;
+  top: 50%;
+  left: 77.7%;
+  translate: -50% -77.7%;
+  background-color: #f1f1f1;
+  height: 1.2rem;
+  width: 12rem;
+}
+.lg__logo-circle {
+  position: absolute;
+  top: 31%;
+  left: 27%;
+  translate: -27% -31%;
+  background-color: #f1f1f1;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
